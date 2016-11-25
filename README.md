@@ -8,4 +8,6 @@ The Towers of a Hanoi is a puzzle game that consists of three towers or rods and
 
 2.) You may not move a larger disk on top of a smaller disk.
 
+Contributor: Chiara Zizza
+
 Assignment Link: http://www.cs.grinnell.edu/~osera/courses/csc161/16sp/homeworks/10-hanoi.html
