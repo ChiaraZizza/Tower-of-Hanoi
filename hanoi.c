@@ -5,9 +5,6 @@
 #include "game.h"
 
 
-//gcc -Wall -std=gnu99 -lcurses game.c hanoi.c -o game
-
-
 /*
  * Renders the base layer as laid out above uses the curses library.
  */
