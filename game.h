@@ -20,7 +20,7 @@ typedef struct hanoi {
 #define NUMBER_OF_DISKS 5
 
 /*
- * Allocates a new disk on the heap with the given values.
+ * Allocates a new disk on the heap with the given value.
  */
 disk_t* make_disk(int val, disk_t *next);
 
