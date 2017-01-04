@@ -5,7 +5,7 @@
 #include "game.h"
 
 /* 
- * Allocates a new disk on the heap with the given values.
+ * Allocates a new disk on the heap with the given value.
  */
 disk_t* make_disk(int val, disk_t *next) {
   disk_t *new_disk = (disk_t*)malloc(sizeof(disk_t));
