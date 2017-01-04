@@ -6,17 +6,16 @@
 
 
 /*
- * Renders the base layer as laid out above uses the curses library.
+ * Renders the base layer using the curses library.
  */
 void render_base_layer(void) {
 
-  //REMOVE CLEAR TO MANUALLY INPUT IN MAIN
     initscr();    // Initializes the screen
     clear();      // Clears the screen
     curs_set(0);  // Hides the cursor
 
     /*
-     * The following three towers and move count are printed to the
+     * The three towers and the number of moves count are printed to the
      * terminal screen as the default background.
      */
     
@@ -76,8 +75,8 @@ void render_game_layer(hanoi_t *game) {
 }
 
 int main(void) {
-  hanoi_t *hanoi = make_hanoi();    //makes three towers
-  hanoi->tower1 = initial_tower();  //puts disks onto first tower
+  hanoi_t *hanoi = make_hanoi();    //makes three rods
+  hanoi->tower1 = initial_tower();  //puts disks onto first rod
 
   bool flag1 = true;  //tests if user-input towers exist.
   bool flag2 = true;  //tests if user-input move is legal.
@@ -85,7 +84,7 @@ int main(void) {
   
   render_game_layer(hanoi);
 
-  /* Continues playing the game until a tower is completed on the second or third space */
+  /* Continues playing the game until a tower is completed on the second or third rod */
   while(!(is_complete_tower(hanoi->tower2)) &&
 	!(is_complete_tower(hanoi->tower3))) {
     mvprintw(16, 3, "Enter source tower.");
@@ -107,7 +106,7 @@ int main(void) {
     refresh();
     getchar();
     
-    tower_t *src = make_tower();  //first user input = tower
+    tower_t *src = make_tower();   //first user input = tower
     tower_t *dest = make_tower();  //second user input = tower
 
     /* Takes first user input and assigns it to tower */
